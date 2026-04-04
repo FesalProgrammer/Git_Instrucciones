@@ -14,6 +14,13 @@
 12. git push -u origin main
 Listo.
 
+# GUIA UNDOING CHANGES
+Como Git registra todo lo que creas/escribes, puedes usar git restore mas el nombre del archivo y su extension para borrar lo ultimo escrito.
+usar git restore --staged notas_git.md para restaurar un archivo que tiene un add a el estado anterior.
+Usar git clean -xdf para borrar un archivo nuevo (untracked) que no ha sido registrado por git.
+Si tienes un archivo que ya salio de untracked entonces usas git checkout para descartar lo ultimo. git checkout file name para ser especifico o git checkout . para descartar todo lo nuevo.
+Si el archivo ya subio al stage entonces aqui no funciona git clean -xdf ni git checkout. Git te da una pista para bajarlo del stage usando git reset HEAD <file>
+reglas que aplican para undoing un archivo ya commiteado, git reset --hard HEAD^ file lo elimina. git reset --softHEAD~1 lo baja al stage, un nivel y git --mixed HEAD~1 lo baja desde stage hasta el file system (un nivel). 
 
 # GUIA DE COMANDOS GIT
 El flujo típico para registrar y compartir cambios:
