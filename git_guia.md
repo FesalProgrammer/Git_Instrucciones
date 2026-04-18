@@ -1,5 +1,5 @@
 # GUIA INICIO DE REPO EN GITHUB ENLAZADO A ARCHIVO LOCAL
-
+Metodo 1
 1. Crear carpeta local
 2. Abrir carpeta con vsc
 3. Crear archivo dentro de la carpeta local
@@ -14,6 +14,11 @@
 11. git branch -M main
 12. git push -u origin main
     Listo.
+
+Metodo 2
+1. Ya creadas e instaladas las 2 SSH (publica y privada), crear repositorio en github.
+
+
 
 # GUIA UNDOING CHANGES
 
@@ -109,3 +114,210 @@ View
 tip: when copy a command line in gitbash, use ctrl + insert for copying
 tip: si se pierde el repositorio local, para restaurarlo debes crear otro repositorio en github con el mismo nombre del repositorio local perdido y acompañado de la palabra backup al final del nombre.
 Copiar la url que te da github y abrir gitbash. escribir "git remote remove origin". Luego escribbir "git remote -v". luego escribes "git remote add origin <pegar aqui la url previamente copiada>". Luego escribir "git remote -v" para chequear que la nueva url haya sido salvada en github. Entoces corremos el comando git push y luego seguimos las instrucciones de gitbash, es decir, corremos el siguiente comando: git push --set-upstream origin master. git log para ver que el push ha sido hecho.
+
+LA INSTALACION DE LAS SSH SE LLEVA A CABO UNICAMENTE EN GITBASH (ES EL INTERPRETE DEL KERNEL DE UNIX PARA WINDOWS). EN MAC Y LINUX SE TRABAJA DIRECTAMENTE EN LA TERMINAL
+
+
+Para abrir gitbash:
+1. click simbolo window y escribir git, hacer click en gitbash
+2. Tambien se puede hacer en la terminal al lado del simbolo + hacer click y seleccionar gitbash de la lista desplegada.
+
+Checking for existing SSH keys
+Before you generate an SSH key, you can check to see if you have any existing SSH keys.
+
+Open Git Bash.
+Para abrir gitbash:
+1. click simbolo window y escribir git, hacer click en gitbash
+2. Tambien se puede abrir VSC y abrir una NEW TERMINAL y  al lado del simbolo + (en la terminal) hacer click y seleccionar gitbash de la lista desplegada(si es que esta instalado, sino habria que instalar GIT).
+
+texto ejemplo de la terminal gitbash:
+fesal@LAPTOP-MD2LE27A MINGW64 ~
+$
+verificar que el path termina exactamente en el nombre de usuario.
+
+Enter ls -al ~/.ssh to see if existing SSH keys are present.
+
+$ ls -al ~/.ssh #copiar y pegar este codigo en gitbash (no incluir simbolo $)
+
+PARA SALIR (logout) DE GITBASH => EXIT
+PARA LIMPIAR DE GITBASH => CLEAR
+
+SI TE ENCUENTRAS EN EL DIRECTORIO INICIAL: fesal@LAPTOP-MD2LE27A MINGW64 ~
+
+PARA CAMBIAR AL ESCRITORIO => cd Desktop/
+fesal@LAPTOP-MD2LE27A MINGW64 ~/Desktop
+
+
+# Lists the files in your .ssh directory, if they exist
+
+Para conocer tu usuario y el correo que tienes configurado en git usa:
+git config --list
+
+user.name=FesalProgrammer
+user.email=FesalProgramming@gmail.com
+
+#Generating a new SSH key and adding it to the ssh-agent
+
+#Generating a new SSH key
+ssh-keygen -t ed25519 -C "FesalProgramming@gmail.com"
+enter
+te dice que created directory "/C/User/Fesal/.ssh"
+
+luego pide que entres el passphrase, esto lo dejas vacio y le das enter
+vuelve a preguntar confirmacion y das enter nuevamente.
+Sale un texto para informar que las claves ssh se han generado exitosamente
+# Primero nos movemos a la carpeta .ssh de la siguiente manera:
+cd ~/.ssh
+
+# Ya dentro de la carpeta .ssh con la siguiente linea de codigo puedes ver una lista de los archivos que hay dentro de ella.
+
+ls -lrta
+
+#Para ver la key privada en gitbash escribe la sig linea:
+cat id_ed25519
+
+Para la llave publica
+cat id_ed25519.pub
+
+Luego ir al explorador (carpeta donde se instalo el .ssh)
+C:\Users\fesal\.ssh
+Encontraras 2 archivos, el de abajo es el publico. lo seleccionas y lo abres con VSC y copias la key y la pegas en un editor como block de notas.
+
+Key ssh publico:
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJfN1aVbU5ZEdIOkshzN3wnN2Tnxk8NedHnf+1tjlLQu FesalProgramming@gmail.com
+
+#Agregar la Public Key a la cuenta de GitHub
+abrir GitHub y hacer click en la foto de perfil de la izquierda, seleccionar setting y luego hacer click en SSH and GPG KEYS
+Hacer click en New SSH key, dar un nombre descrip tivo y pegar la key publica en el espacio reservado para la key y click en Add ssh key y listo eso es todo por el lado de github.
+
+Siguiente paso:
+$ADDING SSH KEY AL SSH-AGENT
+primero
+# start the ssh-agent in the background.
+#copiar y pegar esta linea de comando en gitbash
+eval "$(ssh-agent -s)" #esta linea inicia (start) el agente
+
+segundo
+#add your SSH private key to the ssh-agent. copiar y pegar esta linea de comando en gitbash y enter y enter en las passphrase.
+ssh-add c:/Users/fesal/.ssh/id_ed25519
+
+y enter y enter en las passphrase. Listo la clave privada queda agregada al agente.
+El agente se encarga de verificar que la clave publica instalada en github y la clave privada instalada localmente en nuestra pc hagan match para permitir transacciones como: clonar, push, pull en proyectos colaborativos.
+
+Esto es todo, ya se puede clonar repositorios o subir repositorios
+
+
+Describe all the steps to make possible the following task: This task is performed immediately after the previous one (I Can Win).
+
+1. Add a .gitignore file to the project and configure it to hide files with the extension .db, .log and directories with the names target or bin.
+
+2. Create a feature branch and add two commits to it
+
+3. Merge the feature branch in master
+
+4. Return to feature and create the arrows.txt file with the following contents:
+
+The ship glides gently on the waves
+As day turns into night
+
+Make a commit.
+
+5. Go to master. Create the arrows.txt file there and add the following text:
+
+One thousand burning arrows
+
+Fill the starlit sky
+
+Make a commit.
+
+6. Merge feature in master resolving the conflict: save all 4 lines in arrows.txt file in the order they were added in steps 4 and 5.
+
+Here are the detailed steps to accomplish your task:
+
+Add a .gitignore file:
+
+Create a file named .gitignore in your project root.
+Add these lines:
+
+*.db
+*.log
+target/
+bin/
+
+Here are the detailed steps to accomplish your task:
+
+1. Add a .gitignore file:
+   - Create a file named .gitignore in your project root.
+   - Add these lines:
+     ```
+     *.db
+     *.log
+     target/
+     bin/
+     ```
+
+2. Create a feature branch and add two commits:
+   - Initialize git (if not already): git init
+   - Add and commit .gitignore: git add .gitignore && git commit -m "Add .gitignore"
+   - Create and switch to a feature branch: git checkout -b feature
+   - Make your first change (e.g., touch a file or edit song.txt), git add, and git commit -m "First feature commit"
+   - Make a second change, git add, and git commit -m "Second feature commit"
+
+3. Merge the feature branch into master:
+   - Switch to master: git checkout master
+   - Merge feature: git merge feature
+
+4. Return to feature and create arrows.txt:
+   - Switch to feature: git checkout feature
+   - Create arrows.txt with:
+     ```
+     The ship glides gently on the waves
+     As day turns into night
+     ```
+   - git add arrows.txt && git commit -m "Add arrows.txt with ship poem"
+
+5. Go to master and create arrows.txt with different content:
+   - Switch to master: git checkout master
+   - Create arrows.txt with:
+     ```
+     One thousand burning arrows
+
+     Fill the starlit sky
+     ```
+   - git add arrows.txt && git commit -m "Add arrows.txt with arrows poem"
+
+6. Merge feature into master, resolve conflict:
+   - git merge feature
+   - When the conflict in arrows.txt appears, edit arrows.txt so it contains all 4 lines in this order:
+     ```
+     The ship glides gently on the waves
+     As day turns into night
+     One thousand burning arrows
+
+     Fill the starlit sky
+     ```
+   - git add arrows.txt
+   - git commit -m "Merge feature into master, resolve arrows.txt conflict with all lines"
+
+Let me know if you want these steps executed automatically or need help with any specific command.   - git add arrows.txt
+   - git commit -m "Merge feature into master, resolve arrows.txt conflict with all lines"
+
+Let me know if you want these steps executed automatically or need help with any specific command.
+
+how to solve this: error: pathspec 'master' did not match any file(s) known to. 
+
+This error means the master branch does not exist in your repository. To solve it:
+
+1. Check your current branches:  
+   git branch
+
+2. If you see main but not master, your default branch is named main.  
+   To create master from your current branch:  
+   git checkout -b master
+
+Or, if you want to rename main to master:  
+git branch -m main master
+
+After this, you can switch to master with git checkout master.
+
+
