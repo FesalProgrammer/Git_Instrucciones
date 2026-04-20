@@ -115,7 +115,7 @@ tip: when copy a command line in gitbash, use ctrl + insert for copying
 tip: si se pierde el repositorio local, para restaurarlo debes crear otro repositorio en github con el mismo nombre del repositorio local perdido y acompañado de la palabra backup al final del nombre.
 Copiar la url que te da github y abrir gitbash. escribir "git remote remove origin". Luego escribbir "git remote -v". luego escribes "git remote add origin <pegar aqui la url previamente copiada>". Luego escribir "git remote -v" para chequear que la nueva url haya sido salvada en github. Entoces corremos el comando git push y luego seguimos las instrucciones de gitbash, es decir, corremos el siguiente comando: git push --set-upstream origin master. git log para ver que el push ha sido hecho.
 
-LA INSTALACION DE LAS SSH SE LLEVA A CABO UNICAMENTE EN GITBASH (ES EL INTERPRETE DEL KERNEL DE UNIX PARA WINDOWS). EN MAC Y LINUX SE TRABAJA DIRECTAMENTE EN LA TERMINAL
+LA INSTALACION DE LAS SSH SE REALIZA EN GITBASH (ES EL INTERPRETE DEL KERNEL DE UNIX PARA WINDOWS). EN MAC Y LINUX SE TRABAJA DIRECTAMENTE EN LA TERMINAL
 
 
 Para abrir gitbash:
@@ -206,6 +206,19 @@ El agente se encarga de verificar que la clave publica instalada en github y la 
 
 Esto es todo, ya se puede clonar repositorios o subir repositorios
 
+# Para clonar, desde gitbash, localmente un repositorio que se encuentra en github (puede ser publico o privado):
+. Escribir cd Desktop/
+# luego copiar el ssh del repositorio a clonar:
+. git clone git@github.com:FesalProgrammer/i_can_win.git
+enter y listo.
+. Buscar la carpeta en el escritorio en la barra inferior (Desktop file explorer) y abrir con VSC.
+. Abrir i_can_win usando VSC.
+. Crear un archivo (por ejemplo un .txt)
+. git add .
+. git commit -m "primer commit"
+. git push -u origin main 
+Se debe verificar que el repositorio en gitub se haya actualizado con el archivo .txt
+listo.
 
 Describe all the steps to make possible the following task: This task is performed immediately after the previous one (I Can Win).
 
@@ -259,12 +272,14 @@ Here are the detailed steps to accomplish your task:
 2. Create a feature branch and add two commits:
    - Initialize git (if not already): git init
    - Add and commit .gitignore: git add .gitignore && git commit -m "Add .gitignore"
-   - Create and switch to a feature branch: git checkout -b feature
+   - Create and switch to a feature branch:
+     git checkout -b feature
    - Make your first change (e.g., touch a file or edit song.txt), git add, and git commit -m "First feature commit"
    - Make a second change, git add, and git commit -m "Second feature commit"
 
 3. Merge the feature branch into master:
-   - Switch to master: git checkout master
+   - Switch to master:
+     git checkout master
    - Merge feature: git merge feature
 
 4. Return to feature and create arrows.txt:
@@ -274,37 +289,43 @@ Here are the detailed steps to accomplish your task:
      The ship glides gently on the waves
      As day turns into night
      ```
-   - git add arrows.txt && git commit -m "Add arrows.txt with ship poem"
+   - git add arrows.txt
+   - git commit -m "Add arrows.txt with ship poem"
 
 5. Go to master and create arrows.txt with different content:
-   - Switch to master: git checkout master
+   - Switch to master:
+     git checkout master
+
    - Create arrows.txt with:
      ```
      One thousand burning arrows
 
      Fill the starlit sky
      ```
-   - git add arrows.txt && git commit -m "Add arrows.txt with arrows poem"
+   - git add arrows.txt 
+   - git commit -m "Add arrows.txt with arrows poem"
 
 6. Merge feature into master, resolve conflict:
    - git merge feature
-   - When the conflict in arrows.txt appears, edit arrows.txt so it contains all 4 lines in this order:
+   - When the conflict in arrows.txt appears, edit arrows.txt in git editor (select combine incoming + current) so it contains all 4 lines in this order.
+   - Edita el conflicto en el editor git que el programa sugiere. de entre las dos opciones selecciona "accept Combine incoming + current", y despues resolver en el editor. en la parte baja el editor se muestran las lineas propuestas, edita manualamente, separando el segundo parrafo del primero con un enter y cuando quede como quieres lo cierras.
+   Asi debe quedar reuelto el conflicto:
      ```
      The ship glides gently on the waves
      As day turns into night
      One thousand burning arrows
-
      Fill the starlit sky
      ```
-   - git add arrows.txt
-   - git commit -m "Merge feature into master, resolve arrows.txt conflict with all lines"
+ y continuas con los siguientes pasos:
+- git add arrows.txt
+- git commit -m "Merge feature into master, resolve arrows.txt conflict with all lines"
+- git push
+   
+Then:
+- git add arrows.txt
+- git commit -m "Merge feature into master, resolve arrows.txt conflict with all lines"
 
-Let me know if you want these steps executed automatically or need help with any specific command.   - git add arrows.txt
-   - git commit -m "Merge feature into master, resolve arrows.txt conflict with all lines"
-
-Let me know if you want these steps executed automatically or need help with any specific command.
-
-how to solve this: error: pathspec 'master' did not match any file(s) known to. 
+how to solve the following error: error: pathspec 'master' did not match any file(s) known to. 
 
 This error means the master branch does not exist in your repository. To solve it:
 
