@@ -1,3 +1,465 @@
+-----PUBLIC KEY-----
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDpPaisA1QNkS1IV2fTYjRW4tQgdjr1C6pte6KKzRHxz fesalprogramming@gmail.com
+
+# Como hago para ver si tengo instalado git
+Para verificar si tienes Git instalado en Windows, puedes hacerlo fácilmente desde la consola.
+
+Paso 1. Abrir la terminal
+Puedes utilizar cualquiera de estas opciones:
+
+Presiona las teclas Windows + R.
+
+Escribe cmd.
+
+Presiona Enter.
+
+También puedes abrir PowerShell o la terminal de Visual Studio Code.
+
+Paso 2. Ejecutar el comando
+Escribe el siguiente comando:
+
+git --version
+
+Presiona Enter.
+
+Paso 3. Interpretar el resultado
+Git instalado
+Si aparece algo parecido a esto:
+
+git version 2.45.1.windows.1
+
+¡Perfecto! Git está instalado en tu computadora.
+
+Git no instalado o no reconocido
+Si aparece este mensaje:
+
+'git' no se reconoce como un comando interno o externo
+
+Significa que Git no está instalado o que no está configurado en el PATH de Windows.
+
+Paso 4. Si no tienes Git
+Puedes descargarlo desde su página oficial:
+
+Descargar Git para Windows.
+
+Cuando ejecutes git --version, dime qué resultado te aparece y te ayudo con el siguiente paso.
+
+También podemos continuar con la configuración de Git en Visual Studio Code.  Configurar Git en VS Code
+
+Ayúdame a configurar Git en Visual Studio Code paso a paso en Windows.
+¡Perfecto! Vamos a configurar Git en Visual Studio Code (VS Code) en Windows, paso a paso y desde cero.
+
+El objetivo es que puedas utilizar Git para guardar versiones de tus proyectos, registrar cambios y subir tu código a GitHub.
+
+Paso 1. Verificar que Git esté instalado
+Abre Visual Studio Code.
+
+En el menú superior, selecciona Terminal → New Terminal (Nueva terminal).
+
+Escribe:
+
+git --version
+
+Si aparece algo parecido a:
+
+git version 2.45.1.windows.1
+
+Git instalado correctamente
+Si no reconoce el comando, primero debes instalar Git desde su página oficial:
+
+Descargar Git para Windows.
+
+Paso 2. Configurar tu nombre y correo electrónico
+Git necesita saber quién realiza los cambios en los proyectos.
+
+En la terminal de VS Code ejecuta:
+
+git config --global user.name "Tu Nombre"
+
+Luego:
+
+git config --global user.email "tu_correo@gmail.com"
+
+Utiliza el correo que quieras asociar a tus proyectos de GitHub.
+
+Para comprobar la configuración:
+
+git config --global --list
+
+Deberías ver:
+
+user.name=Tu Nombre
+user.email=tu_correo@gmail.com
+Paso 3. Comprobar que VS Code reconoce Git
+Observa la barra lateral izquierda de VS Code.
+
+Busca el icono de Control de código fuente (Source Control).
+
+Haz clic sobre él.
+
+How to easily delete Git Branches in Visual Studio Code | bobbyhadz
+Si Git está correctamente instalado, VS Code debería reconocerlo automáticamente.
+
+Paso 4. Crear tu primer repositorio Git
+Vamos a practicar con un proyecto sencillo.
+
+1. En tu computadora, crea una carpeta llamada:
+
+C:\Proyectos\git-practice
+En VS Code, selecciona File → Open Folder.
+
+Busca y abre la carpeta git-practice.
+
+Presiona Ctrl + Shift + G para abrir Control de código fuente.
+
+Selecciona Initialize Repository (Inicializar repositorio).
+
+How To Use Git Integration in Visual Studio Code | DigitalOcean
+¡Ya tienes tu primer repositorio Git local!
+
+Esto significa que Git comenzará a controlar los cambios que realices dentro de esa carpeta. Todavía no has subido nada a Internet. 
+
+Visual Studio Code
++1
+
+Paso 5. Crear tu primer archivo
+En el explorador de archivos de VS Code, crea un archivo llamado README.md.
+
+Escribe lo siguiente:
+
+# Mi primer proyecto con Git
+
+Estoy aprendiendo a utilizar Git y GitHub.
+Guarda el archivo con Ctrl + S.
+
+Regresa a Control de código fuente.
+
+Verás que aparece README.md en la sección Changes.
+
+La letra U significa que es un archivo nuevo que Git todavía no está siguiendo.
+
+Paso 6. Guardar tu primer cambio (Commit)
+Este es uno de los pasos más importantes.
+
+3 Ways to Backup Your Code (Even If You Don’t Know Git) - DEV Community
+En la sección Changes, pulsa el signo + que aparece junto a README.md.
+
+El archivo pasará a Staged Changes.
+
+En el campo de mensaje escribe:
+
+Mi primer commit
+4. Pulsa el botón Commit.
+
+¡Primer commit realizado!
+Acabas de guardar una versión de tu proyecto en el historial local de Git.
+
+Importante: Commit guarda los cambios localmente, pero no los sube a GitHub. 
+
+Visual Studio Code
++1
+
+Paso 7. Conectar VS Code con GitHub (opcional)
+Git y GitHub son herramientas diferentes:
+
+Git: controla las versiones de tu código en tu computadora.
+
+GitHub: permite almacenar tus repositorios en Internet y compartirlos.
+
+Bridging the Gap: Understanding Git, GitHub, and Engineering Collaboration for Non-Tech PMs
+Para conectarlos:
+
+Crea una cuenta en GitHub.
+
+En VS Code presiona Ctrl + Shift + P.
+
+Escribe Publish to GitHub.
+
+Selecciona esa opción.
+
+VS Code te solicitará iniciar sesión en GitHub.
+
+Sigue las instrucciones del navegador.
+
+Elige el nombre del repositorio.
+
+Selecciona Private para que sea privado durante esta práctica.
+
+Confirma la publicación.
+
+¡Listo! Tu proyecto estará publicado en GitHub. 
+
+Visual Studio Code
++1
+
+Paso 8. Los cinco comandos Git que debes conocer
+Comando
+
+Función
+
+git status
+
+Ver el estado de los archivos
+
+git add .
+
+Preparar todos los cambios
+
+git commit -m "mensaje"
+
+Guardar una versión
+
+git push
+
+Subir cambios a GitHub
+
+git pull
+
+Descargar cambios de GitHub
+
+Comprobemos cómo vas
+Quiero que avancemos de manera práctica, sin saltarnos pasos.
+
+1. ¿Pudiste ejecutar git --version?
+
+
+Sí, aparece la versión de Git.
+
+No, aparece un error.
+
+Todavía no lo probé.
+2. ¿Tienes una cuenta de GitHub?
+
+
+Sí, tengo cuenta.
+
+No, todavía no tengo.
+3. ¿En qué paso estás?
+
+
+Todavía no comencé.
+
+Configuré nombre y correo.
+
+Inicialicé el repositorio.
+
+Realicé mi primer commit.
+
+Publiqué el proyecto en GitHub.
+Mi propuesta es que aprendamos Git y GitHub trabajando sobre un proyecto real de Java o desarrollo web. Así podrás practicar lo que se utiliza en un equipo de desarrollo profesional.
+
+Mi situación con Git en Windows y VS Code: git --version: yes. Cuenta de GitHub: yes. Mi avance: 0. Continúa guiándome paso a paso.
+¡Excelente! Ya tenemos dos cosas importantes: Git está instalado y tienes una cuenta de GitHub. Ahora vamos a comenzar desde cero y avanzar juntos, paso a paso.
+
+Vamos a utilizar Visual Studio Code y Windows.
+
+Etapa 1. Configurar Git en VS Code
+Git instalado Cuenta GitHub disponible
+
+Paso 1. Abrir Visual Studio Code
+Abre Visual Studio Code.
+
+En el menú superior, selecciona Terminal.
+
+Haz clic en New Terminal (Nueva terminal).
+
+Deberías ver una ventana de terminal en la parte inferior.
+
+Install Laravel di Laptop Windows | by Udacoding Official | Udacoding | Medium
+Paso 2. Configurar tu identidad
+Vamos a indicarle a Git quién eres.
+
+Primero escribe este comando:
+
+git config --global user.name "Tu Nombre"
+
+Reemplaza Tu Nombre por el nombre que quieres que aparezca en tus contribuciones.
+
+Ahora escribe:
+
+git config --global user.email "tu_correo@gmail.com"
+
+Utiliza el correo asociado a tu cuenta de GitHub, preferentemente.
+
+Paso 3. Verificar la configuración
+Escribe:
+
+git config --global --list
+
+Deberías obtener algo parecido a:
+
+user.name=Tu Nombre
+user.email=tu_correo@gmail.com
+Si aparecen ambos datos, la configuración está correcta.
+
+Tu primera tarea
+Antes de continuar, quiero que realices estos pasos y comprobemos que todo funciona.
+
+Lista de comprobación
+
+
+Abrí la terminal de VS Code.
+
+Configuré mi nombre y correo electrónico.
+
+Ejecuté git config --global --list.
+
+Importante: No compartas contraseñas ni tokens de GitHub.
+
+Cuando terminemos esta etapa, crearemos nuestro primer repositorio, guardaremos un archivo con commit y finalmente lo publicaremos en GitHub.
+
+Vamos a hacerlo como una práctica real de desarrollo de software.
+
+Ya completé la configuración inicial de Git en VS Code. Quiero continuar con la creación de mi primer repositorio local.
+¡Excelente! Ya configuramos Git. Ahora vamos a crear tu primer repositorio local, utilizando Visual Studio Code en Windows.
+
+Un repositorio es una carpeta de proyecto que Git controla para registrar los cambios que vas realizando en tus archivos.
+
+Etapa 2. Crear tu primer repositorio local
+Paso 1. Crear una carpeta para el proyecto
+En Windows:
+
+Abre el Explorador de archivos.
+
+Ingresa en el disco C:.
+
+Crea una carpeta llamada Proyectos.
+
+Dentro de ella crea otra carpeta llamada mi-primer-repositorio.
+
+La estructura debe quedar así:
+
+C:
+
+Proyectos
+
+mi-primer-repositorio
+
+Proyecto
+Paso 2. Abrir la carpeta en VS Code
+Abre Visual Studio Code.
+
+Selecciona File → Open Folder.
+
+Busca C:\Proyectos\mi-primer-repositorio.
+
+Haz clic en Seleccionar carpeta.
+
+Ahora VS Code tiene abierto tu proyecto.
+
+Paso 3. Inicializar el repositorio Git
+Abre la terminal de VS Code:
+
+Menú Terminal → New Terminal.
+
+Escribe el siguiente comando:
+
+git init
+
+Presiona Enter.
+
+Deberías ver un mensaje parecido a:
+
+Initialized empty Git repository in
+C:/Proyectos/mi-primer-repositorio/.git/
+Repositorio creado
+¿Qué acaba de suceder?
+
+Git creó una carpeta oculta llamada .git dentro de tu proyecto.
+
+Esta carpeta contiene la información necesaria para administrar las versiones de tus archivos.
+
+Importante: No debes borrar ni modificar manualmente esa carpeta.
+
+Paso 4. Verificar el repositorio
+En la misma terminal escribe:
+
+git status
+
+Deberías obtener algo parecido a:
+
+On branch master
+
+No commits yet
+
+nothing to commit
+Dependiendo de tu configuración, puede aparecer main en lugar de master. Ambos resultados son posibles.
+
+Esto significa que Git ya está funcionando dentro de tu proyecto.
+
+Paso 5. Crear tu primer archivo
+Ahora vamos a crear un archivo para nuestro proyecto.
+
+En el panel Explorer de VS Code, haz clic en el icono de nuevo archivo.
+
+Escribe el nombre:
+
+README.md
+
+3. Dentro del archivo escribe:
+
+# Mi primer repositorio Git
+
+Este es mi primer proyecto utilizando Git
+y Visual Studio Code.
+
+Estoy aprendiendo a controlar versiones.
+4. Guarda el archivo presionando Ctrl + S.
+
+Add a README file to your GitHub repo 📖
+Paso 6. Verificar los cambios
+Regresa a la terminal y ejecuta:
+
+git status
+
+Ahora deberías observar algo similar a:
+
+Untracked files:
+
+    README.md
+¿Qué significa Untracked?
+
+Significa que Git detectó el archivo, pero todavía no lo está siguiendo para registrar sus cambios.
+
+¡Esto es exactamente lo que queremos!
+
+Comprobemos tu avance
+¿Pudiste completar estos pasos?
+
+1. ¿Ejecutaste git init?
+
+
+Sí, se creó el repositorio.
+
+No, apareció un error.
+2. ¿Creaste el archivo README.md?
+
+
+Sí, ya está creado.
+
+Todavía no.
+3. ¿Qué resultado obtuviste al ejecutar git status?
+
+
+Aparece README.md como Untracked.
+
+Aparece otro resultado o un error.
+¿Qué haremos después?
+
+En la siguiente etapa aprenderemos tres conceptos fundamentales:
+
+git add: preparar los archivos.
+
+git commit: guardar una versión del proyecto.
+
+git log: consultar el historial de versiones.
+
+Estos tres conceptos son fundamentales para trabajar profesionalmente con Git.
+
+
+
+
+
 # GUIA INICIO DE REPO EN GITHUB ENLAZADO A ARCHIVO LOCAL
 Metodo 1
 1. Crear carpeta local
@@ -118,9 +580,9 @@ Copiar la url que te da github y abrir gitbash. escribir "git remote remove orig
 LA INSTALACION DE LAS SSH SE REALIZA EN GITBASH (ES EL INTERPRETE DEL KERNEL DE UNIX PARA WINDOWS). EN MAC Y LINUX SE TRABAJA DIRECTAMENTE EN LA TERMINAL
 
 
-Para abrir gitbash:
-1. click simbolo window y escribir git, hacer click en gitbash
-2. Tambien se puede hacer en la terminal al lado del simbolo + hacer click y seleccionar gitbash de la lista desplegada.
+Para abrir la terminal gitbash:
+1. click simbolo window en la barra inferior y escribir git, hacer click en gitbash
+2. Tambien se puede hacer en la terminal de VS code al lado del simbolo + hacer click y seleccionar gitbash de la lista desplegada.
 
 Checking for existing SSH keys
 Before you generate an SSH key, you can check to see if you have any existing SSH keys.
@@ -131,7 +593,7 @@ Para abrir gitbash:
 2. Tambien se puede abrir VSC y abrir una NEW TERMINAL y  al lado del simbolo + (en la terminal) hacer click y seleccionar gitbash de la lista desplegada(si es que esta instalado, sino habria que instalar GIT).
 
 texto ejemplo de la terminal gitbash:
-fesal@LAPTOP-MD2LE27A MINGW64 ~
+Fesal@DESKTOP-EACSNF6 MINGW64 ~
 $
 verificar que el path termina exactamente en el nombre de usuario.
 
@@ -142,11 +604,10 @@ $ ls -al ~/.ssh #copiar y pegar este codigo en gitbash (no incluir simbolo $)
 PARA SALIR (logout) DE GITBASH => EXIT
 PARA LIMPIAR DE GITBASH => CLEAR
 
-SI TE ENCUENTRAS EN EL DIRECTORIO INICIAL: fesal@LAPTOP-MD2LE27A MINGW64 ~
+SI TE ENCUENTRAS EN EL DIRECTORIO INICIAL: Fesal@DESKTOP-EACSNF6 MINGW64 ~
 
 PARA CAMBIAR AL ESCRITORIO => cd Desktop/
-fesal@LAPTOP-MD2LE27A MINGW64 ~/Desktop
-
+Fesal@DESKTOP-EACSNF6 MINGW64~/Desktop
 
 # Lists the files in your .ssh directory, if they exist
 
@@ -184,7 +645,7 @@ C:\Users\fesal\.ssh
 Encontraras 2 archivos, el de abajo es el publico. lo seleccionas y lo abres con VSC y copias la key y la pegas en un editor como block de notas.
 
 Key ssh publico:
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJfN1aVbU5ZEdIOkshzN3wnN2Tnxk8NedHnf+1tjlLQu FesalProgramming@gmail.com
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDpPaisA1QNkS1IV2fTYjRW4tQgdjr1C6pte6KKzRHxz fesalprogramming@gmail.com
 
 #Agregar la Public Key a la cuenta de GitHub
 abrir GitHub y hacer click en la foto de perfil de la izquierda, seleccionar setting y luego hacer click en SSH and GPG KEYS
