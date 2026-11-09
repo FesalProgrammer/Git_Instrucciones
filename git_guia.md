@@ -119,9 +119,6 @@ How To Use Git Integration in Visual Studio Code | DigitalOcean
 
 Esto significa que Git comenzará a controlar los cambios que realices dentro de esa carpeta. Todavía no has subido nada a Internet. 
 
-Visual Studio Code
-+1
-
 Paso 5. Crear tu primer archivo
 En el explorador de archivos de VS Code, crea un archivo llamado README.md.
 
@@ -141,8 +138,7 @@ La letra U significa que es un archivo nuevo que Git todavía no está siguiendo
 Paso 6. Guardar tu primer cambio (Commit)
 Este es uno de los pasos más importantes.
 
-3 Ways to Backup Your Code (Even If You Don’t Know Git) - DEV Community
-En la sección Changes, pulsa el signo + que aparece junto a README.md.
+3 Ways to Backup Your Code (Even If You Don’t Know Git) - En la sección Changes, pulsa el signo + que aparece junto a README.md.
 
 El archivo pasará a Staged Changes.
 
@@ -155,9 +151,6 @@ Mi primer commit
 Acabas de guardar una versión de tu proyecto en el historial local de Git.
 
 Importante: Commit guarda los cambios localmente, pero no los sube a GitHub. 
-
-Visual Studio Code
-+1
 
 Paso 7. Conectar VS Code con GitHub (opcional)
 Git y GitHub son herramientas diferentes:
@@ -188,9 +181,6 @@ Selecciona Private para que sea privado durante esta práctica.
 Confirma la publicación.
 
 ¡Listo! Tu proyecto estará publicado en GitHub. 
-
-Visual Studio Code
-+1
 
 Paso 8. Los cinco comandos Git que debes conocer
 Comando
@@ -225,20 +215,6 @@ Quiero que avancemos de manera práctica, sin saltarnos pasos.
 
 Sí, aparece la versión de Git.
 
-No, aparece un error.
-
-Todavía no lo probé.
-2. ¿Tienes una cuenta de GitHub?
-
-
-Sí, tengo cuenta.
-
-No, todavía no tengo.
-3. ¿En qué paso estás?
-
-
-Todavía no comencé.
-
 Configuré nombre y correo.
 
 Inicialicé el repositorio.
@@ -265,7 +241,6 @@ Haz clic en New Terminal (Nueva terminal).
 
 Deberías ver una ventana de terminal en la parte inferior.
 
-Install Laravel di Laptop Windows | by Udacoding Official | Udacoding | Medium
 Paso 2. Configurar tu identidad
 Vamos a indicarle a Git quién eres.
 
@@ -296,7 +271,6 @@ Tu primera tarea
 Antes de continuar, quiero que realices estos pasos y comprobemos que todo funciona.
 
 Lista de comprobación
-
 
 Abrí la terminal de VS Code.
 
@@ -329,13 +303,8 @@ Dentro de ella crea otra carpeta llamada mi-primer-repositorio.
 
 La estructura debe quedar así:
 
-C:
+C:/Proyectos/mi-primer-repositorio
 
-Proyectos
-
-mi-primer-repositorio
-
-Proyecto
 Paso 2. Abrir la carpeta en VS Code
 Abre Visual Studio Code.
 
@@ -427,24 +396,15 @@ Comprobemos tu avance
 ¿Pudiste completar estos pasos?
 
 1. ¿Ejecutaste git init?
-
-
-Sí, se creó el repositorio.
-
-No, apareció un error.
+   Sí, se creó el repositorio.
+   No, apareció un error.
 2. ¿Creaste el archivo README.md?
-
-
-Sí, ya está creado.
-
-Todavía no.
+   Sí, ya está creado.
+   Todavía no.
 3. ¿Qué resultado obtuviste al ejecutar git status?
-
-
-Aparece README.md como Untracked.
-
-Aparece otro resultado o un error.
-¿Qué haremos después?
+   Aparece README.md como Untracked.
+   Aparece otro resultado o un error.
+   ¿Qué haremos después?
 
 En la siguiente etapa aprenderemos tres conceptos fundamentales:
 
@@ -455,9 +415,6 @@ git commit: guardar una versión del proyecto.
 git log: consultar el historial de versiones.
 
 Estos tres conceptos son fundamentales para trabajar profesionalmente con Git.
-
-
-
 
 
 # GUIA INICIO DE REPO EN GITHUB ENLAZADO A ARCHIVO LOCAL
@@ -479,9 +436,6 @@ Metodo 1
 
 Metodo 2
 1. Ya creadas e instaladas las 2 SSH (publica y privada), crear repositorio en github.
-
-
-
 # GUIA UNDOING CHANGES
 
 Como Git registra todo lo que creas/escribes, puedes usar git restore mas el nombre del archivo y su extension para borrar lo ultimo escrito.
