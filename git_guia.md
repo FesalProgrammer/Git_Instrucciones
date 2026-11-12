@@ -74,11 +74,11 @@ Git necesita saber quién realiza los cambios en los proyectos.
 
 En la terminal de VS Code ejecuta:
 
-git config --global user.name "Tu Nombre"
+git config --global user.name "Fesalprogrammer"
 
 Luego:
 
-git config --global user.email "tu_correo@gmail.com"
+git config --global user.email "Fesalprogramming@gmail.com"
 
 Utiliza el correo que quieras asociar a tus proyectos de GitHub.
 
@@ -88,8 +88,10 @@ git config --global --list
 
 Deberías ver:
 
-user.name=Tu Nombre
-user.email=tu_correo@gmail.com
+user.name= Fesalprogrammer
+user.email= Fesalprogramming@gmail.com
+credential.https://autocode.git.epam.com.provider=generic
+
 Paso 3. Comprobar que VS Code reconoce Git
 Observa la barra lateral izquierda de VS Code.
 
